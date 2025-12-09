@@ -306,7 +306,8 @@ async function handleCrossOriginRequest(request) {
     };
 
     if (hasParsedBody) {
-      result.bodyParsed = parsedBody;
+      result.body = parsedBody;
+      result.originBody = responseBody;
     }
 
     return result;
