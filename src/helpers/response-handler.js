@@ -96,11 +96,11 @@
       : hasBodyParsedProp
         ? response.bodyParsed
         : '';
-    const bodyString = bodyToString(bodySource);
+    
 
     const yapiData = {
       res: {
-        body: bodyString, // 原始响应体字符串
+        body: bodySource, 
         header: response.headers || {},
         status: response.status || 0,
         statusText: response.statusText || 'OK',
