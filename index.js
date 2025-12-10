@@ -554,11 +554,11 @@
                 : hasBodyParsedProp
                   ? response.bodyParsed
                   : '';
-              const yapiBodyString = helpers.bodyToString(bodySource); // 确保 body 为字符串格式
+             
 
               yapiData = {
                 res: {
-                  body: yapiBodyString, // 原始响应体字符串
+                  body: bodySource, 
                   header: headers, // 响应头
                   status: response.status || 0, // 状态码
                   statusText: response.statusText || 'OK',
