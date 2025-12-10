@@ -192,14 +192,14 @@
       };
 
     const bodySource = hasBodyProp ? response.body : hasBodyParsedProp ? response.bodyParsed : '';
-    const bodyString = bodyToString(bodySource);
+    
 
     const result = {
       status: response.status || 0,
       statusText: response.statusText || 'OK',
       headers,
       data: parsedData === undefined ? {} : parsedData,
-      body: bodyString
+      body: bodySource
     };
 
     if (hasBodyParsedProp) {
